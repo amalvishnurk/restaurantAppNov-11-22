@@ -1,0 +1,72 @@
+<div class="container border mt-5 mb-5 p-4">
+    <form action="">
+        <div class="row">
+            <h3 class="text-center mb-3 ">Add new Restaurant details</h3>
+            <div class="col-lg-6">
+                <div class="mb-2">
+                    <!-- <input (change)="changeId($event)" name="id" class="form-control" type="text" placeholder="Restaurant Id"> -->
+                    <input [(ngModel)]="id" name="id" class="form-control" type="text" placeholder="Restaurant Id">
+                    <!-- if input is inside a form tag then for ngModel to work we have to set name for input  -->
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="neighborhood" name="neighborhood" class="form-control" type="text"
+                        placeholder="Restaurant neighborhood">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="photograph" name="photograph" class="form-control" type="text"
+                        placeholder="Restaurant image">
+                </div>
+                <div>
+                    <label for="" class="mb-2">Operating hours</label>
+                    <input [(ngModel)]="Monday" name="Monday" type="text" class="form-control mb-2"
+                        placeholder="Monday">
+                    <input [(ngModel)]="Tuesday" name="Tuesday" type="text" class="form-control mb-2"
+                        placeholder="Tuesday">
+                    <input [(ngModel)]="Wednesday" name="Wednesday" type="text" class="form-control mb-2"
+                        placeholder="Wednesday">
+                    <input [(ngModel)]="Thursday" name="Thursday" type="text" class="form-control mb-2"
+                        placeholder="Thursday">
+                    <input [(ngModel)]="Friday" name="Friday" type="text" class="form-control mb-2"
+                        placeholder="Friday">
+                    <input [(ngModel)]="Saturday" name="Saturday" type="text" class="form-control mb-2"
+                        placeholder="Saturday">
+                    <input [(ngModel)]="Sunday" name="Sunday" type="text" class="form-control mb-2"
+                        placeholder="Sunday">
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mb-2">
+                    <input [(ngModel)]="rname" name="rname" class="form-control" type="text"
+                        placeholder="Restaurant Name">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="Address" name="Address" class="form-control" type="text"
+                        placeholder="Restaurant Address">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="cuisine" name="cuisine" class="form-control" type="text"
+                        placeholder="Restaurant cuisine type">
+                </div>
+                <div>
+                    <label for="" class="mb-2">Reviews</label>
+                    <input [(ngModel)]="rvName" name="rvName" type="text" class="form-control mb-2" placeholder="Name">
+                    <input [(ngModel)]="Date" name="Date" type="text" class="form-control mb-2" placeholder="Date">
+                    <input [(ngModel)]="Rating" name="Rating" type="text" class="form-control mb-2"
+                        placeholder="Rating">
+                    <input [(ngModel)]="Comments" name="Comments" type="text" class="form-control mb-2"
+                        placeholder="Comments">
+                </div>
+                <div>
+                    <label for="" class="mb-2">Location</label>
+                    <input [(ngModel)]="lat" name="lat" type="text" class="form-control mb-2" placeholder="Latitude">
+                    <input [(ngModel)]="id" name="lng" type="text" class="form-control mb-2" placeholder="Longitude">
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <!-- event binding -->
+                <button (click)="addProduct()" type="submit" class="btn btn-dark">Add Restaurant</button>
+            </div>
+        </div>
+    </form>
+</div>

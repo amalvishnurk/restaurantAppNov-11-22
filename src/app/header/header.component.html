@@ -1,0 +1,28 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container px-4 px-lg-5">
+        <div class="col-md-7">
+            <a class="navbar-brand" href="">
+                <!-- make href as empty string so that when brand is clicked it will go to restaurant 
+                    list page (since path of that page is "") -->
+                <i class="fa-solid fa-utensils fa-3x text-light"></i> &nbsp;&nbsp;
+                <!-- for non braking space &nbsp -->
+                <b class="text-light" style="font-size: 30px;">Cafe De Bale</b>
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4 ">
+                <li class="nav-item">
+                    <!-- keyup is the event happening here -->
+                    <input (keyup)="search($event)" style="width: 200px;" type="text" [placeholder]="restNote" class="form-control">
+                </li>
+                &nbsp; &nbsp;
+                <li class="nav-item"><a class="nav-link active text-light" aria-current="page" href="add-restaurant">Add new Restaurant </a></li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
